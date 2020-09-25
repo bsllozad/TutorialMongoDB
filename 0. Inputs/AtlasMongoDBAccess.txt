@@ -1,0 +1,8 @@
+Atlas Cluster 
+User: shieldUser
+Password: SHIELD123456
+
+
+
+Conection command:
+mongo "mongodb+srv://clustershieldmongodb.ively.mongodb.net/<dbname>" --username shieldUser
