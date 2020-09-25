@@ -1,0 +1,69 @@
+db.candidate.insertOne({
+	name:"Mathias Lopez Quintero",
+	displlayName:"Mathias Lopez",
+	dateBirth:"23/01/2014",
+	community:"1A",
+	slogan:"Juntos hacemos mas"
+})
+
+db.candidate.insertOne({
+	name:"Luciana Ulloa",
+	displlayName:"Luciana Ulloa",
+	dateBirth:"12/12/2014",
+	community:"1A",
+	slogan:"Amigos todos"
+})
+
+db.candidate.insertOne({
+	name:"Nicolas Lopez Quintero",
+	displlayName:"Nicolas Lopez",
+	dateBirth:"19/01/2017",
+	community:"PJA",
+	slogan:"Juntos hacemos mas"
+})
+
+
+
+
+
+
+
+db.community.insertOne({
+	code:"CMSFA",
+	description:"Colegio Mayor San Francisco de Asis"
+})
+
+db.community.insertOne({
+	code:"PRIMARIA",
+	description:"Primaria",
+	communityId:"5f6d190be16598fb003bf218"
+})
+
+db.community.insertOne({
+	code:"1A",
+	description:"Primero A",
+	communityId:"5f6d1929e16598fb003bf219"
+})
+
+db.community.insertOne({
+	code:"PJA",
+	description:"Pre Jardin A",
+	communityId:"5f6d1929e16598fb003bf219"
+})
+
+
+
+
+
+
+db.user.insertMany([{user:"admin",password:"admin",role:"ADMIN",fullName:"Admin Admin",state:"1"},{user:"mathias.lopez",password:"123456",role:"CANDIDATE",fullName:"Mathias Lopez Quintero",state:"1"},{user:"bernardo.lopez",password:"123456",role:"SHIELD",fullName:"Bernardo Lopez",state:"1"}])
+
+
+db.votingJournal.insert([{startDate:"24/09/2020",finishDate:"25/09/2020",communityId:"5f6d194ae16598fb003bf21a", candidates:["5f6d1853e16598fb003bf217","5f6d1aa2e16598fb003bf21b"]},{startDate:"24/09/2020",finishDate:"25/09/2020",communityId:"5f6d1ad4e16598fb003bf21d", candidates:["5f6d1aa9e16598fb003bf21c"]}])
+
+
+
+ db.votingJournal.find({communityId:"5f6d194ae16598fb003bf21a"}).pretty()
+ 
+ db.votingJournal.find({communityId:{$eq:"5f6d194ae16598fb003bf21a"}}).pretty()
+
